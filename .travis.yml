@@ -14,14 +14,14 @@ after_success:
     - docker build -t sumanth/multi-server:latest ./server
     - docker build -t sumanth/multi-worker:latest ./worker
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-    - docker tag sumanth/multi-client:latest sumanth/multi-client:latest 
-    - docker push sumanth/multi-client:latest
-    - docker tag sumanth/multi-nginx:latest sumanth/multi-client:latest 
-    - docker push sumanth/multi-nginx:latest
-    - docker tag sumanth/multi-server:latest sumanth/multi-client:latest 
-    - docker push sumanth/multi-server:latest
-    - docker tag sumanth/multi-worker:latest sumanth/multi-client:latest 
-    - docker push sumanth/multi-worker:latest
+    - docker tag sumanth/multi-client:latest 1bm18cs112/multi-client:latest 
+    - docker push 1bm18cs112/multi-client:latest
+    - docker tag sumanth/multi-nginx:latest 1bm18cs112/multi-nginx:latest 
+    - docker push 1bm18cs112/multi-nginx:latest
+    - docker tag sumanth/multi-server:latest 1bm18cs112/multi-server:latest 
+    - docker push 1bm18cs112/multi-server:latest
+    - docker tag sumanth/multi-worker:latest 1bm18cs112/multi-worker:latest 
+    - docker push 1bm18cs112/multi-worker:latest
 
 
 
