@@ -9,10 +9,10 @@ before_install:
 script: 'true'
 
 after_success:
-    - docker build -t sumanth/multi-client ./client
-    - docker build -t sumanth/multi-nginx ./nginx
-    - docker build -t sumanth/multi-server ./server
-    - docker build -t sumanth/multi-worker ./worker
+    - docker build -t sumanth/multi-client:latest ./client
+    - docker build -t sumanth/multi-nginx:latest ./nginx
+    - docker build -t sumanth/multi-server:latest ./server
+    - docker build -t sumanth/multi-worker:latest ./worker
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
     - docker tag sumanth/multi-client:latest sumanth/multi-client:latest 
     - docker push sumanth/multi-client:latest
