@@ -14,10 +14,10 @@ after_success:
     - docker build -t sumanth/multi-server ./server
     - docker build -t sumanth/multi-worker ./worker
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-    - docker push sumanth/multi-client
-    - docker push sumanth/multi-nginx
-    - docker push sumanth/multi-server
-    - docker push sumanth/multi-worker
+    - docker push docker.io/1bm18cs112/multi-client
+    - docker push docker.io/1bm18cs112/multi-nginx
+    - docker push docker.io/1bm18cs112/multi-server
+    - docker push docker.io/1bm18cs112/multi-worker
 
 
 
