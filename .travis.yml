@@ -23,6 +23,19 @@ after_success:
     - docker tag sumanth/multi-worker:latest 1bm18cs112/multi-worker:latest 
     - docker push 1bm18cs112/multi-worker:latest
 
+deploy:
+    provider: elasticbeanstalk
+    region: us-east-2
+    app: multi-docker
+    env: MultiDocker-env
+    bucket_name: elasticbeanstalk-us-east-2-921338979412
+    bucket_path: docker-multi
+    on:
+        branch: master
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+
+
 
 
 
